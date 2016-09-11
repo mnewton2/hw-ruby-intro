@@ -11,12 +11,16 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return 0 if arr.size == 0
+  return arr[0] if arr.size == 1
+  arr.sort!
+  return arr[-1] + arr[-2]
 end
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+def sum_to_n? (arr, n)
+  arr.permutation(2).any?{|n1,n2| n1 + n2 == n}
 end
+
 
 # Part 2
 
